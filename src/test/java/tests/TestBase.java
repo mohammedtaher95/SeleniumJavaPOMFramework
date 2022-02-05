@@ -37,7 +37,7 @@ public class TestBase {
 			driver = new FirefoxDriver();
 		}
 		
-		else if(browserName.equalsIgnoreCase("edge"))
+		else if(browserName.equalsIgnoreCase("Edge"))
 		{
 			String FireFoxPath = System.getProperty("user.dir") + "/drivers/msedgedriver.exe";
 			System.setProperty("webdriver.gecko.driver", FireFoxPath);
