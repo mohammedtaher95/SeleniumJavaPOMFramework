@@ -21,7 +21,7 @@ public class MyAccountTest extends TestBase {
 	String newPassword = "123456" ; 
 	String firstName = "Mohammed" ; 
 	String lastName = "Taher" ; 
-	String email = "test422@gmail.com" ; 
+	String email = "test452@gmail.com" ; 
 	
 	@Test(priority = 1)
 	public void UserCanRegisterSuccessfully()
