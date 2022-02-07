@@ -2,9 +2,13 @@ package tests;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -18,6 +22,7 @@ import utilities.Helper;
 public class TestBase {
 
 	public static WebDriver driver;
+	public static WebDriverWait wait;
 
 	@BeforeSuite
 	@Parameters("browser")
@@ -45,7 +50,8 @@ public class TestBase {
 		}
 		driver.manage().window().maximize();
 		driver.navigate().to("https://demo.nopcommerce.com/");
-		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+		wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Register")));
 	}
 
 	@AfterTest

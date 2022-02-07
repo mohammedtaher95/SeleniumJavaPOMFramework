@@ -2,8 +2,12 @@ package tests;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.github.javafaker.Faker;
 
 import pages.HomePage;
 import pages.LoginPage;
@@ -17,11 +21,13 @@ public class MyAccountTest extends TestBase {
 	LoginPage loginPage;
 	MyAccountPage myaccountPage;
 	
-	String oldPassword = "12345678" ; 
-	String newPassword = "123456" ; 
-	String firstName = "Mohammed" ; 
-	String lastName = "Taher" ; 
-	String email = "test452@gmail.com" ; 
+	Faker faker = new Faker();
+	
+	String oldPassword = faker.number().digits(8).toString(); 
+	String newPassword = faker.number().digits(9).toString(); 
+	String firstName = faker.name().firstName(); 
+	String lastName = faker.name().lastName();
+	String email = faker.internet().emailAddress(); 
 	
 	@Test(priority = 1)
 	public void UserCanRegisterSuccessfully()
@@ -42,7 +48,8 @@ public class MyAccountTest extends TestBase {
 		myaccountPage.ChangePassword(oldPassword, newPassword);
 		Assert.assertTrue(myaccountPage.ChangeResult.getText().contains("Password was changed"));
 		myaccountPage.CloseMessage();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.ico-logout")));
 	}
 	
 	@Test(priority = 3, dependsOnMethods = {"RegisteredUserCanChangePassword"})
@@ -51,7 +58,7 @@ public class MyAccountTest extends TestBase {
 		registerPage.userlogout();
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 4, dependsOnMethods = {"RegisteredUserCanLogout"})
 	public void RegisteredUserCanLogin()
 	{
 		homeObject.openLoginPage();
