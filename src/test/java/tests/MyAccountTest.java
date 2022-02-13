@@ -40,7 +40,7 @@ public class MyAccountTest extends TestBase {
 	}
 	
 	@Test(priority = 2)
-	public void RegisteredUserCanChangePassword()
+	public void RegisteredUserCanChangePassword() throws InterruptedException
 	{
 		myaccountPage = new MyAccountPage(driver);
 		registerPage.openMyAccountPage();
@@ -48,8 +48,7 @@ public class MyAccountTest extends TestBase {
 		myaccountPage.ChangePassword(oldPassword, newPassword);
 		Assert.assertTrue(myaccountPage.ChangeResult.getText().contains("Password was changed"));
 		myaccountPage.CloseMessage();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		//wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.ico-logout")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.ico-logout")));
 	}
 	
 	@Test(priority = 3, dependsOnMethods = {"RegisteredUserCanChangePassword"})

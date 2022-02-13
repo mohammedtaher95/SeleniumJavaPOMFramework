@@ -47,4 +47,10 @@ public class UserRegistrationTest extends TestBase {
 		loginPage.userLogin(Email, Password);
 		Assert.assertTrue(registerPage.logoutLink.getText().contains("Log out"));
 	}
+	
+	@Test(dependsOnMethods = {"RegisteredUserCanLogin"})
+	public void UserCanLogout()
+	{
+		registerPage.userlogout();
+	}
 }
