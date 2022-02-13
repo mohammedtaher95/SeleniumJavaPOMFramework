@@ -19,8 +19,8 @@ node {
         }
     }
     stage('Results') {
-        //testng '**/target/surefire-reports/TEST-*.xml'
-        //archiveArtifacts 'target/*.jar'
+        // testng '**/target/surefire-reports/TEST-*.xml'
+        // archiveArtifacts 'target/*.jar'
         step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml'])
         
     }
