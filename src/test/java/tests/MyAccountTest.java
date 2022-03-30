@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -43,12 +44,12 @@ public class MyAccountTest extends TestBase {
 	public void RegisteredUserCanChangePassword() throws InterruptedException
 	{
 		myaccountPage = new MyAccountPage(driver);
+		//wait = new WebDriverWait(driver, 20);
 		registerPage.openMyAccountPage();
 		myaccountPage.openChangePasswordpage();
 		myaccountPage.ChangePassword(oldPassword, newPassword);
 		Assert.assertTrue(myaccountPage.ChangeResult.getText().contains("Password was changed"));
 		myaccountPage.CloseMessage();
-		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.ico-logout")));
 	}
 	
 	@Test(priority = 3, dependsOnMethods = {"RegisteredUserCanChangePassword"})

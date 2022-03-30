@@ -10,19 +10,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import utilities.Helper;
 
 public class TestBase {
 
 	public static WebDriver driver;
-	public static WebDriverWait wait;
+	public WebDriverWait wait;
 
 	@BeforeSuite
 	@Parameters("browser")
@@ -58,6 +53,12 @@ public class TestBase {
 	public void clearCookies()
 	{
 		driver.manage().deleteAllCookies();
+	}
+
+	@AfterClass
+	public void HomePageNavigation()
+	{
+		driver.navigate().to("https://demo.nopcommerce.com/");
 	}
 
 	@AfterSuite

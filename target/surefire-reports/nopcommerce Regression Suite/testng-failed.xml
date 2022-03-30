@@ -8,15 +8,25 @@
         <methods>
           <include name="RegisteredUserCanLogout"/>
           <include name="startDriver"/>
-          <include name="UserCanRegisterSuccessfully"/>
           <include name="clearCookies"/>
           <include name="RegisteredUserCanChangePassword"/>
           <include name="UserLogout"/>
           <include name="closeDriver"/>
           <include name="screenShotOnFailure"/>
+          <include name="HomePageNavigation"/>
           <include name="RegisteredUserCanLogin"/>
         </methods>
       </class> <!-- tests.MyAccountTest -->
+      <class name="tests.ContactUsTest">
+        <methods>
+          <include name="UserCanContactWebsiteOwner"/>
+          <include name="startDriver"/>
+          <include name="clearCookies"/>
+          <include name="closeDriver"/>
+          <include name="screenShotOnFailure"/>
+          <include name="HomePageNavigation"/>
+        </methods>
+      </class> <!-- tests.ContactUsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [nopcommerce Regression Suite] -->
