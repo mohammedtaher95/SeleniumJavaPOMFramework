@@ -12,9 +12,9 @@ node {
             // Run the maven build
             withEnv(["MVN_HOME=$mvnHome"]) {
                 if (isUnix()) {
-                    sh '"$MVN_HOME/bin/mvn" -Dmaven.clean'
+                    sh '"$MVN_HOME/bin/mvn" clean'
                 } else {
-                    bat(/"%MVN_HOME%\bin\mvn" -Dmaven.clean/)
+                    bat(/"%MVN_HOME%\bin\mvn" clean/)
                 }
             }
         }
