@@ -12,4 +12,5 @@ public class ProductDetailsPage extends PageBase{
 
     @FindBy(css = "strong.current-item")
     public WebElement productNameBreadCrumb;
+
 }

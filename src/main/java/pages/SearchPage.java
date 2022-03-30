@@ -35,6 +35,7 @@ public class SearchPage extends PageBase {
     public void OpenProductPage()
     {
         ClickButton(ProductResult);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("strong.current-item")));
     }
 
     public void ProductSearchUsingAutoSuggest(String SearchText)
