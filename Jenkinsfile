@@ -8,7 +8,17 @@ node {
         // **       in the global configuration.
         mvnHome = tool 'MAVEN_HOME'
     }
-    stage('Build') {
+    stage('Clean Old Builds') {
+            // Run the maven build
+            withEnv(["MVN_HOME=$mvnHome"]) {
+                if (isUnix()) {
+                    sh '"$MVN_HOME/bin/mvn" -Dmaven.clean'
+                } else {
+                    bat(/"%MVN_HOME%\bin\mvn" -Dmaven.clean/)
+                }
+            }
+        }
+    stage('Run Tests') {
         // Run the maven build
         withEnv(["MVN_HOME=$mvnHome"]) {
             if (isUnix()) {
