@@ -45,7 +45,7 @@ public class TestBase {
 		}
 		driver.manage().window().maximize();
 		driver.navigate().to("https://demo.nopcommerce.com/");
-		wait = new WebDriverWait(driver,20);
+		wait = new WebDriverWait(driver,120);
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Register")));
 	}
 
