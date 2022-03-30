@@ -1,8 +1,10 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
@@ -38,11 +40,7 @@ public class SearchPage extends PageBase {
     public void ProductSearchUsingAutoSuggest(String SearchText)
     {
         Fill_in_Text(SearchField, SearchText);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        wait.until(ExpectedConditions.elementToBeClickable((By) ProductList));
         ProductList.get(0).click();
     }
 }

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="12" total="24" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="nopcommerce Regression Suite" duration-ms="24176" started-at="2022-03-30T22:15:26 EET" finished-at="2022-03-30T22:15:51 EET">
+  <suite name="nopcommerce Regression Suite" duration-ms="24626" started-at="2022-03-30T22:24:17 EET" finished-at="2022-03-30T22:24:42 EET">
     <groups>
     </groups>
-    <test name="Test" duration-ms="24176" started-at="2022-03-30T22:15:26 EET" finished-at="2022-03-30T22:15:51 EET">
+    <test name="Test" duration-ms="24626" started-at="2022-03-30T22:24:17 EET" finished-at="2022-03-30T22:24:42 EET">
       <class name="tests.UserRegistrationTest">
-        <test-method status="PASS" signature="startDriver(java.lang.String)[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="startDriver" is-config="true" duration-ms="2876" started-at="2022-03-30T22:15:24 EET" finished-at="2022-03-30T22:15:26 EET">
+        <test-method status="PASS" signature="startDriver(java.lang.String)[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="startDriver" is-config="true" duration-ms="4234" started-at="2022-03-30T22:24:13 EET" finished-at="2022-03-30T22:24:17 EET">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method status="PASS" signature="UserCanRegisterSuccessfully()[pri:1, instance:tests.UserRegistrationTest@1023150a]" name="UserCanRegisterSuccessfully" duration-ms="2454" started-at="2022-03-30T22:15:26 EET" finished-at="2022-03-30T22:15:29 EET">
+        <test-method status="PASS" signature="UserCanRegisterSuccessfully()[pri:1, instance:tests.UserRegistrationTest@1023150a]" name="UserCanRegisterSuccessfully" duration-ms="2843" started-at="2022-03-30T22:24:17 EET" finished-at="2022-03-30T22:24:20 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UserCanRegisterSuccessfully -->
-        <test-method status="PASS" signature="RegisteredUserCanLogout()[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="RegisteredUserCanLogout" duration-ms="809" started-at="2022-03-30T22:15:29 EET" depends-on-methods="tests.UserRegistrationTest.UserCanRegisterSuccessfully" finished-at="2022-03-30T22:15:30 EET">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RegisteredUserCanLogout -->
-        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:15:29 EET" finished-at="2022-03-30T22:15:29 EET">
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:24:20 EET" finished-at="2022-03-30T22:24:20 EET">
           <params>
             <param index="0">
               <value>
@@ -37,11 +33,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShotOnFailure -->
-        <test-method status="PASS" signature="RegisteredUserCanLogin()[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="RegisteredUserCanLogin" duration-ms="1885" started-at="2022-03-30T22:15:30 EET" depends-on-methods="tests.UserRegistrationTest.RegisteredUserCanLogout" finished-at="2022-03-30T22:15:32 EET">
+        <test-method status="PASS" signature="RegisteredUserCanLogout()[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="RegisteredUserCanLogout" duration-ms="1098" started-at="2022-03-30T22:24:20 EET" depends-on-methods="tests.UserRegistrationTest.UserCanRegisterSuccessfully" finished-at="2022-03-30T22:24:21 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisteredUserCanLogout -->
+        <test-method status="PASS" signature="RegisteredUserCanLogin()[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="RegisteredUserCanLogin" duration-ms="2095" started-at="2022-03-30T22:24:21 EET" depends-on-methods="tests.UserRegistrationTest.RegisteredUserCanLogout" finished-at="2022-03-30T22:24:23 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RegisteredUserCanLogin -->
-        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:15:30 EET" finished-at="2022-03-30T22:15:30 EET">
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:24:21 EET" finished-at="2022-03-30T22:24:21 EET">
           <params>
             <param index="0">
               <value>
@@ -52,7 +52,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShotOnFailure -->
-        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:15:32 EET" finished-at="2022-03-30T22:15:32 EET">
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="screenShotOnFailure" is-config="true" duration-ms="1" started-at="2022-03-30T22:24:23 EET" finished-at="2022-03-30T22:24:23 EET">
           <params>
             <param index="0">
               <value>
@@ -63,11 +63,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShotOnFailure -->
-        <test-method status="PASS" signature="UserCanLogout()[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="UserCanLogout" duration-ms="901" started-at="2022-03-30T22:15:32 EET" depends-on-methods="tests.UserRegistrationTest.RegisteredUserCanLogin" finished-at="2022-03-30T22:15:32 EET">
+        <test-method status="PASS" signature="UserCanLogout()[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="UserCanLogout" duration-ms="992" started-at="2022-03-30T22:24:23 EET" depends-on-methods="tests.UserRegistrationTest.RegisteredUserCanLogin" finished-at="2022-03-30T22:24:24 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UserCanLogout -->
-        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:15:32 EET" finished-at="2022-03-30T22:15:32 EET">
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:24:24 EET" finished-at="2022-03-30T22:24:24 EET">
           <params>
             <param index="0">
               <value>
@@ -78,25 +78,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShotOnFailure -->
-        <test-method status="PASS" signature="HomePageNavigation()[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="HomePageNavigation" is-config="true" duration-ms="402" started-at="2022-03-30T22:15:32 EET" finished-at="2022-03-30T22:15:33 EET">
+        <test-method status="PASS" signature="HomePageNavigation()[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="HomePageNavigation" is-config="true" duration-ms="504" started-at="2022-03-30T22:24:24 EET" finished-at="2022-03-30T22:24:25 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HomePageNavigation -->
-        <test-method status="PASS" signature="clearCookies()[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="clearCookies" is-config="true" duration-ms="31" started-at="2022-03-30T22:15:51 EET" finished-at="2022-03-30T22:15:51 EET">
+        <test-method status="PASS" signature="clearCookies()[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="clearCookies" is-config="true" duration-ms="102" started-at="2022-03-30T22:24:42 EET" finished-at="2022-03-30T22:24:42 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clearCookies -->
-        <test-method status="PASS" signature="closeDriver()[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="closeDriver" is-config="true" duration-ms="680" started-at="2022-03-30T22:15:51 EET" finished-at="2022-03-30T22:15:51 EET">
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:tests.UserRegistrationTest@1023150a]" name="closeDriver" is-config="true" duration-ms="711" started-at="2022-03-30T22:24:42 EET" finished-at="2022-03-30T22:24:43 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
       </class> <!-- tests.UserRegistrationTest -->
       <class name="tests.MyAccountTest">
-        <test-method status="PASS" signature="UserCanRegisterSuccessfully()[pri:1, instance:tests.MyAccountTest@2b79c8ff]" name="UserCanRegisterSuccessfully" duration-ms="2055" started-at="2022-03-30T22:15:33 EET" finished-at="2022-03-30T22:15:35 EET">
+        <test-method status="PASS" signature="UserCanRegisterSuccessfully()[pri:1, instance:tests.MyAccountTest@2b79c8ff]" name="UserCanRegisterSuccessfully" duration-ms="2414" started-at="2022-03-30T22:24:25 EET" finished-at="2022-03-30T22:24:27 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UserCanRegisterSuccessfully -->
-        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.MyAccountTest@2b79c8ff]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:15:35 EET" finished-at="2022-03-30T22:15:35 EET">
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.MyAccountTest@2b79c8ff]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:24:27 EET" finished-at="2022-03-30T22:24:27 EET">
           <params>
             <param index="0">
               <value>
@@ -107,15 +107,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShotOnFailure -->
-        <test-method status="PASS" signature="RegisteredUserCanChangePassword()[pri:2, instance:tests.MyAccountTest@2b79c8ff]" name="RegisteredUserCanChangePassword" duration-ms="3534" started-at="2022-03-30T22:15:35 EET" finished-at="2022-03-30T22:15:38 EET">
+        <test-method status="PASS" signature="RegisteredUserCanChangePassword()[pri:2, instance:tests.MyAccountTest@2b79c8ff]" name="RegisteredUserCanChangePassword" duration-ms="3780" started-at="2022-03-30T22:24:27 EET" finished-at="2022-03-30T22:24:31 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RegisteredUserCanChangePassword -->
-        <test-method status="PASS" signature="RegisteredUserCanLogout()[pri:3, instance:tests.MyAccountTest@2b79c8ff]" name="RegisteredUserCanLogout" duration-ms="885" started-at="2022-03-30T22:15:38 EET" depends-on-methods="tests.MyAccountTest.RegisteredUserCanChangePassword" finished-at="2022-03-30T22:15:39 EET">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RegisteredUserCanLogout -->
-        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.MyAccountTest@2b79c8ff]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:15:38 EET" finished-at="2022-03-30T22:15:38 EET">
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.MyAccountTest@2b79c8ff]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:24:31 EET" finished-at="2022-03-30T22:24:31 EET">
           <params>
             <param index="0">
               <value>
@@ -126,7 +122,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShotOnFailure -->
-        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.MyAccountTest@2b79c8ff]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:15:39 EET" finished-at="2022-03-30T22:15:39 EET">
+        <test-method status="PASS" signature="RegisteredUserCanLogout()[pri:3, instance:tests.MyAccountTest@2b79c8ff]" name="RegisteredUserCanLogout" duration-ms="1034" started-at="2022-03-30T22:24:31 EET" depends-on-methods="tests.MyAccountTest.RegisteredUserCanChangePassword" finished-at="2022-03-30T22:24:32 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisteredUserCanLogout -->
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.MyAccountTest@2b79c8ff]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:24:32 EET" finished-at="2022-03-30T22:24:32 EET">
           <params>
             <param index="0">
               <value>
@@ -137,15 +137,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShotOnFailure -->
-        <test-method status="PASS" signature="RegisteredUserCanLogin()[pri:4, instance:tests.MyAccountTest@2b79c8ff]" name="RegisteredUserCanLogin" duration-ms="1602" started-at="2022-03-30T22:15:39 EET" depends-on-methods="tests.MyAccountTest.RegisteredUserCanLogout" finished-at="2022-03-30T22:15:41 EET">
+        <test-method status="PASS" signature="RegisteredUserCanLogin()[pri:4, instance:tests.MyAccountTest@2b79c8ff]" name="RegisteredUserCanLogin" duration-ms="2063" started-at="2022-03-30T22:24:32 EET" depends-on-methods="tests.MyAccountTest.RegisteredUserCanLogout" finished-at="2022-03-30T22:24:34 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RegisteredUserCanLogin -->
-        <test-method status="PASS" signature="UserLogout()[pri:5, instance:tests.MyAccountTest@2b79c8ff]" name="UserLogout" duration-ms="807" started-at="2022-03-30T22:15:41 EET" depends-on-methods="tests.MyAccountTest.RegisteredUserCanLogin" finished-at="2022-03-30T22:15:42 EET">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UserLogout -->
-        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.MyAccountTest@2b79c8ff]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:15:41 EET" finished-at="2022-03-30T22:15:41 EET">
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.MyAccountTest@2b79c8ff]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:24:34 EET" finished-at="2022-03-30T22:24:34 EET">
           <params>
             <param index="0">
               <value>
@@ -156,11 +152,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShotOnFailure -->
-        <test-method status="PASS" signature="HomePageNavigation()[pri:0, instance:tests.MyAccountTest@2b79c8ff]" name="HomePageNavigation" is-config="true" duration-ms="431" started-at="2022-03-30T22:15:42 EET" finished-at="2022-03-30T22:15:42 EET">
+        <test-method status="PASS" signature="UserLogout()[pri:5, instance:tests.MyAccountTest@2b79c8ff]" name="UserLogout" duration-ms="1031" started-at="2022-03-30T22:24:34 EET" depends-on-methods="tests.MyAccountTest.RegisteredUserCanLogin" finished-at="2022-03-30T22:24:35 EET">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePageNavigation -->
-        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.MyAccountTest@2b79c8ff]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:15:42 EET" finished-at="2022-03-30T22:15:42 EET">
+        </test-method> <!-- UserLogout -->
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.MyAccountTest@2b79c8ff]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:24:35 EET" finished-at="2022-03-30T22:24:35 EET">
           <params>
             <param index="0">
               <value>
@@ -171,13 +167,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShotOnFailure -->
+        <test-method status="PASS" signature="HomePageNavigation()[pri:0, instance:tests.MyAccountTest@2b79c8ff]" name="HomePageNavigation" is-config="true" duration-ms="515" started-at="2022-03-30T22:24:35 EET" finished-at="2022-03-30T22:24:36 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomePageNavigation -->
       </class> <!-- tests.MyAccountTest -->
       <class name="tests.SearchProductTest">
-        <test-method status="PASS" signature="UserCanSearchForProducts()[pri:0, instance:tests.SearchProductTest@1b96d447]" name="UserCanSearchForProducts" duration-ms="2287" started-at="2022-03-30T22:15:44 EET" finished-at="2022-03-30T22:15:47 EET">
+        <test-method status="PASS" signature="UserCanSearchForProducts()[pri:0, instance:tests.SearchProductTest@1b96d447]" name="UserCanSearchForProducts" duration-ms="2491" started-at="2022-03-30T22:24:38 EET" finished-at="2022-03-30T22:24:41 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UserCanSearchForProducts -->
-        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.SearchProductTest@1b96d447]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:15:47 EET" finished-at="2022-03-30T22:15:47 EET">
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.SearchProductTest@1b96d447]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:24:41 EET" finished-at="2022-03-30T22:24:41 EET">
           <params>
             <param index="0">
               <value>
@@ -188,17 +188,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShotOnFailure -->
-        <test-method status="PASS" signature="HomePageNavigation()[pri:0, instance:tests.SearchProductTest@1b96d447]" name="HomePageNavigation" is-config="true" duration-ms="457" started-at="2022-03-30T22:15:47 EET" finished-at="2022-03-30T22:15:47 EET">
+        <test-method status="PASS" signature="HomePageNavigation()[pri:0, instance:tests.SearchProductTest@1b96d447]" name="HomePageNavigation" is-config="true" duration-ms="567" started-at="2022-03-30T22:24:41 EET" finished-at="2022-03-30T22:24:41 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HomePageNavigation -->
       </class> <!-- tests.SearchProductTest -->
       <class name="tests.SearchProductTestWithAutoSuggest">
-        <test-method status="PASS" signature="UserCanSearchForProductWithAutoSuggest()[pri:0, instance:tests.SearchProductTestWithAutoSuggest@4a68cbc5]" name="UserCanSearchForProductWithAutoSuggest" duration-ms="3047" started-at="2022-03-30T22:15:47 EET" finished-at="2022-03-30T22:15:50 EET">
+        <test-method status="PASS" signature="UserCanSearchForProductWithAutoSuggest()[pri:0, instance:tests.SearchProductTestWithAutoSuggest@4a68cbc5]" name="UserCanSearchForProductWithAutoSuggest" duration-ms="120" started-at="2022-03-30T22:24:41 EET" finished-at="2022-03-30T22:24:41 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UserCanSearchForProductWithAutoSuggest -->
-        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.SearchProductTestWithAutoSuggest@4a68cbc5]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:15:50 EET" finished-at="2022-03-30T22:15:50 EET">
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.SearchProductTestWithAutoSuggest@4a68cbc5]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:24:41 EET" finished-at="2022-03-30T22:24:41 EET">
           <params>
             <param index="0">
               <value>
@@ -209,17 +209,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShotOnFailure -->
-        <test-method status="PASS" signature="HomePageNavigation()[pri:0, instance:tests.SearchProductTestWithAutoSuggest@4a68cbc5]" name="HomePageNavigation" is-config="true" duration-ms="428" started-at="2022-03-30T22:15:50 EET" finished-at="2022-03-30T22:15:51 EET">
+        <test-method status="PASS" signature="HomePageNavigation()[pri:0, instance:tests.SearchProductTestWithAutoSuggest@4a68cbc5]" name="HomePageNavigation" is-config="true" duration-ms="519" started-at="2022-03-30T22:24:41 EET" finished-at="2022-03-30T22:24:42 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HomePageNavigation -->
       </class> <!-- tests.SearchProductTestWithAutoSuggest -->
       <class name="tests.ContactUsTest">
-        <test-method status="PASS" signature="UserCanContactWebsiteOwner()[pri:0, instance:tests.ContactUsTest@4777f71e]" name="UserCanContactWebsiteOwner" duration-ms="1697" started-at="2022-03-30T22:15:42 EET" finished-at="2022-03-30T22:15:44 EET">
+        <test-method status="PASS" signature="UserCanContactWebsiteOwner()[pri:0, instance:tests.ContactUsTest@4777f71e]" name="UserCanContactWebsiteOwner" duration-ms="1824" started-at="2022-03-30T22:24:36 EET" finished-at="2022-03-30T22:24:37 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UserCanContactWebsiteOwner -->
-        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ContactUsTest@4777f71e]" name="screenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-30T22:15:44 EET" finished-at="2022-03-30T22:15:44 EET">
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ContactUsTest@4777f71e]" name="screenShotOnFailure" is-config="true" duration-ms="7" started-at="2022-03-30T22:24:37 EET" finished-at="2022-03-30T22:24:37 EET">
           <params>
             <param index="0">
               <value>
@@ -230,7 +230,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShotOnFailure -->
-        <test-method status="PASS" signature="HomePageNavigation()[pri:0, instance:tests.ContactUsTest@4777f71e]" name="HomePageNavigation" is-config="true" duration-ms="421" started-at="2022-03-30T22:15:44 EET" finished-at="2022-03-30T22:15:44 EET">
+        <test-method status="PASS" signature="HomePageNavigation()[pri:0, instance:tests.ContactUsTest@4777f71e]" name="HomePageNavigation" is-config="true" duration-ms="583" started-at="2022-03-30T22:24:37 EET" finished-at="2022-03-30T22:24:38 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HomePageNavigation -->
