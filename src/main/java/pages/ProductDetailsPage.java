@@ -13,4 +13,12 @@ public class ProductDetailsPage extends PageBase{
     @FindBy(css = "strong.current-item")
     public WebElement productNameBreadCrumb;
 
+    @FindBy(css = "button.button-2.email-a-friend-button")
+    WebElement EmailButton;
+
+    public void EmailFriend()
+    {
+        ClickButton(EmailButton);
+    }
+
 }

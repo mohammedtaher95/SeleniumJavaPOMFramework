@@ -34,7 +34,7 @@ public class SearchPage extends PageBase {
         ClickButton(SearchButton);
     }
 
-    public void OpenProductPage() throws InterruptedException {
+    public void OpenProductPage() {
         ClickButton(ProductResult);
     }
 

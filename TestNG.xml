@@ -8,6 +8,7 @@
       <class name="tests.ContactUsTest"/>
       <class name="tests.SearchProductTest"/>
       <class name="tests.SearchProductTestWithAutoSuggest"/>
+      <class name="tests.EmailFriendTest"/>
     </classes>
   </test> <!-- Test -->
 
@@ -19,6 +20,7 @@
       <class name="tests.ContactUsTest"/>
       <class name="tests.SearchProductTest"/>
       <class name="tests.SearchProductTestWithAutoSuggest"/>
+      <class name="tests.EmailFriendTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
