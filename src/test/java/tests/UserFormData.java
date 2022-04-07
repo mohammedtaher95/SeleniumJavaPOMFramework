@@ -9,7 +9,8 @@ public class UserFormData {
     private String message;
     private String FirstName;
     private String LastName;
-    private String Password;
+    private String OldPassword;
+    private String NewPassword;
 
     public UserFormData() {
         Faker faker = new Faker();
@@ -18,7 +19,8 @@ public class UserFormData {
         message = faker.gameOfThrones().quote();
         FirstName = faker.name().firstName();
         LastName = faker.name().lastName();
-        Password = faker.number().digits(9).toString();
+        OldPassword = faker.number().digits(8).toString();
+        NewPassword = faker.number().digits(9).toString();
     }
 
     public String getFullName() {
@@ -32,8 +34,11 @@ public class UserFormData {
     public String getLastName() {
         return LastName;
     }
-    public String getPassword() {
-        return Password;
+    public String getOldPassword() {
+        return OldPassword;
+    }
+    public String getNewPassword() {
+        return NewPassword;
     }
 
     public String getEmail() {

@@ -17,7 +17,6 @@ public class SearchProductTest extends ParallelTestBase{
         ProductObject = new ProductDetailsPage(getDriver());
         SearchObject.ProductSearch(ProductName);
         SearchObject.OpenProductPage();
-        Thread.sleep(1000);
         Assert.assertTrue(ProductObject.productNameBreadCrumb.getText().equalsIgnoreCase(ProductName));
     }
 }

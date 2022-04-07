@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,6 +13,7 @@ public class SearchPage extends PageBase {
 
     public SearchPage(WebDriver driver) {
         super(driver);
+        jse = (JavascriptExecutor) driver;
     }
 
     @FindBy(id = "small-searchterms")
@@ -23,7 +25,7 @@ public class SearchPage extends PageBase {
     @FindBy(id = "ui-id-1")
     List<WebElement> ProductList;
 
-    @FindBy(css = "h2.product-title")
+    @FindBy(css = "div.picture")
     WebElement ProductResult;
 
     public void ProductSearch(String ProductName)
@@ -32,8 +34,7 @@ public class SearchPage extends PageBase {
         ClickButton(SearchButton);
     }
 
-    public void OpenProductPage()
-    {
+    public void OpenProductPage() throws InterruptedException {
         ClickButton(ProductResult);
     }
 

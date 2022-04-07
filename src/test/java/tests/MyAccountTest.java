@@ -15,41 +15,36 @@ import pages.LoginPage;
 import pages.MyAccountPage;
 import pages.UserRegistrationPage;
 
-public class MyAccountTest extends OldTestBase {
+public class MyAccountTest extends ParallelTestBase {
 	
 	HomePage homeObject;
 	UserRegistrationPage registerPage;
 	LoginPage loginPage;
 	MyAccountPage myaccountPage;
 	
-	Faker faker = new Faker();
-	
-	String oldPassword = faker.number().digits(8).toString(); 
-	String newPassword = faker.number().digits(9).toString(); 
-	String firstName = faker.name().firstName(); 
-	String lastName = faker.name().lastName();
-	String email = faker.internet().emailAddress(); 
+	UserFormData user = new UserFormData();
 	
 	@Test(priority = 1)
 	public void UserCanRegisterSuccessfully()
 	{
-		homeObject = new HomePage(driver);
+		homeObject = new HomePage(getDriver());
 		homeObject.openRegistrationPage();
-		registerPage = new UserRegistrationPage(driver);
-		registerPage.userRegistration(firstName, lastName, email, oldPassword);
+		registerPage = new UserRegistrationPage(getDriver());
+		registerPage.userRegistration(user.getFirstName(), user.getLastName(), user.getEmail(), user.getOldPassword());
 		Assert.assertTrue(registerPage.successMessage.getText().contains("Your registration completed"));
 	}
 	
 	@Test(priority = 2)
 	public void RegisteredUserCanChangePassword() throws InterruptedException
 	{
-		myaccountPage = new MyAccountPage(driver);
+		myaccountPage = new MyAccountPage(getDriver());
 		//wait = new WebDriverWait(driver, 20);
 		registerPage.openMyAccountPage();
 		myaccountPage.openChangePasswordpage();
-		myaccountPage.ChangePassword(oldPassword, newPassword);
+		myaccountPage.ChangePassword(user.getOldPassword(), user.getNewPassword());
 		Assert.assertTrue(myaccountPage.ChangeResult.getText().contains("Password was changed"));
 		myaccountPage.CloseMessage();
+		Thread.sleep(1000);
 	}
 	
 	@Test(priority = 3, dependsOnMethods = {"RegisteredUserCanChangePassword"})
@@ -62,8 +57,8 @@ public class MyAccountTest extends OldTestBase {
 	public void RegisteredUserCanLogin()
 	{
 		homeObject.openLoginPage();
-		loginPage = new LoginPage(driver);
-		loginPage.userLogin(email, newPassword);
+		loginPage = new LoginPage(getDriver());
+		loginPage.userLogin(user.getEmail(), user.getNewPassword());
 		Assert.assertTrue(registerPage.logoutLink.getText().contains("Log out"));
 	}
 	

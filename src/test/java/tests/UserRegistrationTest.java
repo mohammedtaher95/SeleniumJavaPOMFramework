@@ -24,7 +24,7 @@ public class UserRegistrationTest extends ParallelTestBase {
 		homeObject = new HomePage(getDriver());
 		homeObject.openRegistrationPage();
 		registerPage = new UserRegistrationPage(getDriver());
-		registerPage.userRegistration(newUser.getFirstName(), newUser.getLastName(), newUser.getEmail(), newUser.getPassword());
+		registerPage.userRegistration(newUser.getFirstName(), newUser.getLastName(), newUser.getEmail(), newUser.getOldPassword());
 		Assert.assertTrue(registerPage.successMessage.getText().contains("Your registration completed"));
 	}
 	
@@ -39,7 +39,7 @@ public class UserRegistrationTest extends ParallelTestBase {
 	{
 		homeObject.openLoginPage();
 		loginPage = new LoginPage(getDriver());
-		loginPage.userLogin(newUser.getEmail(), newUser.getPassword());
+		loginPage.userLogin(newUser.getEmail(), newUser.getOldPassword());
 		Assert.assertTrue(registerPage.logoutLink.getText().contains("Log out"));
 	}
 	
