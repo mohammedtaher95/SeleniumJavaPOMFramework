@@ -22,6 +22,7 @@ public class ParallelTestBase {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("browserName", browser);
         driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),caps));
+        getDriver().manage().window().maximize();
         getDriver().navigate().to(BaseURL);
     }
 
@@ -30,7 +31,7 @@ public class ParallelTestBase {
         return driver.get();
     }
 
-    @AfterClass
+    @AfterSuite
     public void stopDriver()
     {
         getDriver().quit();

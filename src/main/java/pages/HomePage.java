@@ -4,6 +4,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class HomePage extends PageBase {
 
@@ -20,6 +21,9 @@ public class HomePage extends PageBase {
 
 	@FindBy(linkText = "Contact us")
 	WebElement ContactUsLink;
+
+	@FindBy(id = "customerCurrency")
+	WebElement CurrencyDropDownList;
 	
 	public void openRegistrationPage()
 	{
@@ -35,6 +39,12 @@ public class HomePage extends PageBase {
 	{
 		ScrollToBottom();
 		ClickButton(ContactUsLink);
+	}
+
+	public void changeCurrency(int index)
+	{
+		select = new Select(CurrencyDropDownList);
+		select.selectByIndex(index);
 	}
 
 

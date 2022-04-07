@@ -16,6 +16,9 @@ public class ProductDetailsPage extends PageBase{
     @FindBy(css = "button.button-2.email-a-friend-button")
     WebElement EmailButton;
 
+    @FindBy(id = "price-value-4")
+    public WebElement ProductPriceLabel;
+
     public void EmailFriend()
     {
         ClickButton(EmailButton);

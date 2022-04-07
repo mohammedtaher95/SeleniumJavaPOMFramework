@@ -4,12 +4,15 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ISelect;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageBase 
 {
 	protected WebDriver driver;
 	public static JavascriptExecutor jse;
+	public Select select;
 	
 	// creating Constructor
 	public PageBase(WebDriver driver)
@@ -32,6 +35,5 @@ public class PageBase
 	{
 		jse.executeScript("scrollBy(0,2500)");
 	}
-
 
 }
