@@ -50,7 +50,6 @@ public class MyAccountPage extends PageBase {
     public void CloseMessage()
     {
     	ClickButton(MessageCloseBtn);
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("p.content")));
     }
     
 

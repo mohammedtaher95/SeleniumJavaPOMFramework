@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import pages.ContactUsPage;
 import pages.HomePage;
 
-public class ContactUsTest extends TestBase{
+public class ContactUsTest extends ParallelTestBase{
 
     HomePage HomeObject;
     ContactUsPage ContactObject;
@@ -23,8 +23,8 @@ public class ContactUsTest extends TestBase{
     @Test
     public void UserCanContactWebsiteOwner()
     {
-        HomeObject = new HomePage(driver);
-        ContactObject = new ContactUsPage(driver);
+        HomeObject = new HomePage(getDriver());
+        ContactObject = new ContactUsPage(getDriver());
         HomeObject.openContactUsPage();
         ContactObject.FillContactInfoForm(FullName, Email, Message);
         // wait.until(ExpectedConditions.textToBePresentInElement(ContactObject.successMessage, SuccessMessage));

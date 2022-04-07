@@ -1,6 +1,6 @@
 node {
     def mvnHome
-    stage('Preparation') { // for display purposes
+    stage('Get latest Pulls') { // for display purposes
         // Get some code from a GitHub repository
         git 'https://github.com/mohammedtaher95/SeleniumJavaPOMFramework.git'
         // Get the Maven tool.
@@ -8,6 +8,17 @@ node {
         // **       in the global configuration.
         mvnHome = tool 'MAVEN_HOME'
     }
+
+    stage('Starting Grid') { // for display purposes
+            if (isUnix()) {
+                sh "docker-compose up -d"
+            }
+            else
+            {
+               bat("docker-compose up -d")
+            }
+    }
+
     stage('Clean Old Builds') {
             // Run the maven build
             withEnv(["MVN_HOME=$mvnHome"]) {
@@ -28,6 +39,16 @@ node {
             }
         }
     }
+
+    stage('Teardown Grid') { // for display purposes
+                if (isUnix()) {
+                    sh "docker-compose down"
+                }
+                else
+                {
+                   bat("docker-compose down")
+                }
+        }
     stage('Results') {
         // testng '**/target/surefire-reports/TEST-*.xml'
         // archiveArtifacts 'target/*.jar'

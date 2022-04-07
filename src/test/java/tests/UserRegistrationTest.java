@@ -9,27 +9,22 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.UserRegistrationPage;
 
-public class UserRegistrationTest extends TestBase {
+public class UserRegistrationTest extends ParallelTestBase {
 	
 	
 	HomePage homeObject;
 	UserRegistrationPage registerPage;
 	LoginPage loginPage;
-	
-	Faker faker = new Faker();
-	
-	String FirstName = faker.name().firstName();
-	String LastName = faker.name().lastName();
-	String Email = faker.internet().emailAddress();
-	String Password = faker.number().digits(9).toString();
+
+	UserFormData newUser = new UserFormData();
 	
 	@Test(priority = 1, alwaysRun = true)
 	public void UserCanRegisterSuccessfully()
 	{
-		homeObject = new HomePage(driver);
+		homeObject = new HomePage(getDriver());
 		homeObject.openRegistrationPage();
-		registerPage = new UserRegistrationPage(driver);
-		registerPage.userRegistration(FirstName, LastName, Email, Password);
+		registerPage = new UserRegistrationPage(getDriver());
+		registerPage.userRegistration(newUser.getFirstName(), newUser.getLastName(), newUser.getEmail(), newUser.getPassword());
 		Assert.assertTrue(registerPage.successMessage.getText().contains("Your registration completed"));
 	}
 	
@@ -43,8 +38,8 @@ public class UserRegistrationTest extends TestBase {
 	public void RegisteredUserCanLogin()
 	{
 		homeObject.openLoginPage();
-		loginPage = new LoginPage(driver);
-		loginPage.userLogin(Email, Password);
+		loginPage = new LoginPage(getDriver());
+		loginPage.userLogin(newUser.getEmail(), newUser.getPassword());
 		Assert.assertTrue(registerPage.logoutLink.getText().contains("Log out"));
 	}
 	

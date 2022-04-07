@@ -35,13 +35,11 @@ public class SearchPage extends PageBase {
     public void OpenProductPage()
     {
         ClickButton(ProductResult);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("strong.current-item")));
     }
 
     public void ProductSearchUsingAutoSuggest(String SearchText)
     {
         Fill_in_Text(SearchField, SearchText);
-        wait.until(ExpectedConditions.elementToBeClickable((By) ProductList));
         ProductList.get(0).click();
     }
 }

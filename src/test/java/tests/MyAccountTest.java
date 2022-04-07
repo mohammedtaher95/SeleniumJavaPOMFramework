@@ -15,7 +15,7 @@ import pages.LoginPage;
 import pages.MyAccountPage;
 import pages.UserRegistrationPage;
 
-public class MyAccountTest extends TestBase {
+public class MyAccountTest extends OldTestBase {
 	
 	HomePage homeObject;
 	UserRegistrationPage registerPage;

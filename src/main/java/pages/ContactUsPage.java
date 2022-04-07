@@ -34,6 +34,5 @@ public class ContactUsPage extends PageBase{
         Fill_in_Text(EmailField, Email);
         Fill_in_Text(EnquiryField, Enquiry);
         ClickButton(SubmitBtn);
-        wait.until(ExpectedConditions.visibilityOf(successMessage));
     }
 }

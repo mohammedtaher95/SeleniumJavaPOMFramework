@@ -9,14 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class PageBase 
 {
 	protected WebDriver driver;
-	public WebDriverWait wait;
 	public static JavascriptExecutor jse;
 	
 	// creating Constructor
 	public PageBase(WebDriver driver)
 	{
 		this.driver = driver;
-		wait = new WebDriverWait(driver, 20);
 		PageFactory.initElements(driver, this);
 	}
 	
