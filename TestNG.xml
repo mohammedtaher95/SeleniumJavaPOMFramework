@@ -10,6 +10,7 @@
       <class name="tests.SearchProductTestWithAutoSuggest"/>
       <class name="tests.EmailFriendTest"/>
       <class name="tests.ChangeCurrencyTest"/>
+      <class name="tests.AddProductReviewTest"/>
     </classes>
   </test> <!-- Test -->
 
@@ -23,6 +24,7 @@
       <class name="tests.SearchProductTestWithAutoSuggest"/>
       <class name="tests.EmailFriendTest"/>
       <class name="tests.ChangeCurrencyTest"/>
+      <class name="tests.AddProductReviewTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
