@@ -19,9 +19,18 @@ public class ProductDetailsPage extends PageBase{
     @FindBy(id = "price-value-4")
     public WebElement ProductPriceLabel;
 
+    @FindBy(xpath = "//a[@href=\"/productreviews/4\"][2]")
+    WebElement ReviewHyperlink;
+
     public void EmailFriend()
     {
         ClickButton(EmailButton);
     }
+
+    public void AddReview()
+    {
+        ClickButton(ReviewHyperlink);
+    }
+
 
 }

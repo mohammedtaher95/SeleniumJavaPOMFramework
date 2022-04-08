@@ -4,16 +4,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 
-public class EmailFriendTest extends ParallelTestBase{
+public class AddProductReviewTest extends ParallelTestBase{
 
     HomePage homeObject;
     UserRegistrationPage registerPage;
     SearchPage SearchObject;
     ProductDetailsPage ProductObject;
-    EmailFriendPage EmailObject;
+    ProductReviewPage ReviewObject;
 
     String ProductName = "Apple MacBook Pro 13-inch";
-    String SuccessMessage = "Your message has been sent.";
+    String SuccessMessage = "Product review is successfully added.";
 
     UserFormData newUser = new UserFormData();
 
@@ -37,11 +37,12 @@ public class EmailFriendTest extends ParallelTestBase{
     }
 
     @Test(priority = 3, alwaysRun = true)
-    public void RegisteredUserCanEmailHisFriend() {
-        EmailObject = new EmailFriendPage(getDriver());
-        ProductObject.EmailFriend();
-        EmailObject.FillEmailFriendForm(newUser.getFriendEmail(), newUser.getMessage());
-        Assert.assertTrue(EmailObject.successMessage.getText().equalsIgnoreCase(SuccessMessage));
+    public void RegisteredUserCanAddReviewForProduct() {
+        ReviewObject = new ProductReviewPage(getDriver());
+        ProductObject.AddReview();
+        ReviewObject.FillReviewForm(newUser.getMessage(),newUser.getMessage());
+        Assert.assertTrue(ReviewObject.successMessage.getText().equalsIgnoreCase(SuccessMessage));
+        Assert.assertTrue(ReviewObject.AddedReviewTitle.getText().equals(newUser.getMessage()));
     }
 
     @Test(priority = 4, alwaysRun = true)
