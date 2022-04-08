@@ -10,10 +10,11 @@ import utilities.Helper;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
 public class ParallelTestBase {
 
     public static String BaseURL = "https://demo.nopcommerce.com/";
-    protected ThreadLocal<RemoteWebDriver> driver = null;
+    protected ThreadLocal<RemoteWebDriver> driver;
 
     @BeforeClass
     @Parameters(value = {"browser"})
@@ -31,18 +32,13 @@ public class ParallelTestBase {
         return driver.get();
     }
 
-    @AfterSuite
-    public void stopDriver()
-    {
+    @AfterClass
+    public void stopDriver()  {
+        getDriver().manage().deleteAllCookies();
         getDriver().quit();
         driver.remove();
     }
 
-    @AfterClass
-    public void clearCookies()
-    {
-        getDriver().manage().deleteAllCookies();
-    }
 
     @AfterMethod
     public void screenShotOnFailure(ITestResult testResult)

@@ -12,7 +12,7 @@ public class SearchProductTest extends ParallelTestBase{
     ProductDetailsPage ProductObject;
 
     @Test
-    public void UserCanSearchForProducts() throws InterruptedException {
+    public void UserCanSearchForProducts() {
         SearchObject = new SearchPage(getDriver());
         ProductObject = new ProductDetailsPage(getDriver());
         SearchObject.ProductSearch(ProductName);
