@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.3"
 
 services:
 
@@ -15,31 +15,31 @@ services:
       GRID_TIME_OUT: 300
 
   chrome:
-    image: selenium/node-chrome:4.1.3-20220327
+    image: selenium/node-chrome
     shm_size: 2gb
     depends_on:
       - selenium-hub
     ports:
-      - "5900-5901:5900"
+      - "5901:5900"
     environment:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
       - SE_NODE_OVERRIDE_MAX_SESSIONS=true
-      - SE_NODE_MAX_SESSIONS=4
-      - SE_NODE_MAX_INSTANCES=4
+      - SE_NODE_MAX_SESSIONS=5
+      - SE_NODE_MAX_INSTANCES=5
 
   firefox:
-    image: selenium/node-firefox:4.1.3-20220327
+    image: selenium/node-firefox
     shm_size: 2gb
     depends_on:
       - selenium-hub
     ports:
-      - "5902-5903:5900"
+      - "5902:5900"
     environment:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
       - SE_NODE_OVERRIDE_MAX_SESSIONS=true
-      - SE_NODE_MAX_SESSIONS=4
-      - SE_NODE_MAX_INSTANCES=4
+      - SE_NODE_MAX_SESSIONS=5
+      - SE_NODE_MAX_INSTANCES=5
