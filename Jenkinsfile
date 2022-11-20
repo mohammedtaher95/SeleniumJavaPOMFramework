@@ -15,7 +15,10 @@ node {
             }
             else
             {
-               bat("docker-compose up -d")
+                bat(& "C:\Program Files\Docker\Docker\Docker desktop.exe")
+                echo 'Waiting 2 minutes for starting Docker'
+                sleep 2000
+                bat("docker-compose up -d")
             }
     }
 
