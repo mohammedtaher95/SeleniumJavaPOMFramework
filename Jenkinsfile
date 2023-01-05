@@ -15,9 +15,9 @@ node {
             }
             else
             {
-                bat("& \"Docker desktop.exe\"")
-                echo 'Waiting 2 minutes for starting Docker'
-                sleep 2000
+//                bat("& \"Docker desktop.exe\"")
+//                echo 'Waiting 2 minutes for starting Docker'
+//                sleep 2000
                 bat("docker-compose up -d")
             }
     }
